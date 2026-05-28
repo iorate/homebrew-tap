@@ -1,25 +1,25 @@
 class Wepub < Formula
   desc "CLI to publish browser extensions to Chrome Web Store, Firefox Add-ons, and Edge Add-ons"
   homepage "https://github.com/iorate/wepub"
-  version "0.4.2"
+  version "0.4.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/wepub/releases/download/v0.4.2/wepub-aarch64-apple-darwin.tar.xz"
-      sha256 "6f610083e5ae9b0a3e6039834e91046532e35c5aa13ffa19796637b9170beafd"
+      url "https://github.com/iorate/wepub/releases/download/v0.4.3/wepub-aarch64-apple-darwin.tar.xz"
+      sha256 "8c3251c338400f85a5c4f3f0e9ac5e955155d1fd348d070a6460dfbf64f75333"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/wepub/releases/download/v0.4.2/wepub-x86_64-apple-darwin.tar.xz"
-      sha256 "7b9115e12b05dd27b7779105780d47647b70ea34a5f6fbb1a8f7d327d4e59e05"
+      url "https://github.com/iorate/wepub/releases/download/v0.4.3/wepub-x86_64-apple-darwin.tar.xz"
+      sha256 "f498bc75c34f23141f66704b34ede77ce0a8923470179727a1a6c18c6a17f690"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/wepub/releases/download/v0.4.2/wepub-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1fd6258c77a4e2ec2dd3943906af55e14e4daa11e341a7fc01fe512dbf233de7"
+      url "https://github.com/iorate/wepub/releases/download/v0.4.3/wepub-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2d3ebc901ed2817e8cd1fb23ac8f654be25373fc43766a55d34b68ca101d76e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/wepub/releases/download/v0.4.2/wepub-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ca80d1cf9ca0f0c1dcf940464b9f428cc0fbcf35a29d70684a6d89cc032df9b5"
+      url "https://github.com/iorate/wepub/releases/download/v0.4.3/wepub-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "a6680f558148c7b771725da7571e1c251c6c1c6f829a2d7375f63f281eb7d8bb"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
