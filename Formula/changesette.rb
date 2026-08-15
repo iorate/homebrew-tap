@@ -1,25 +1,25 @@
 class Changesette < Formula
-  desc "A version and changelog manager for single-package applications, using the changesets file format"
+  desc "A version and changelog manager using the changesets file format"
   homepage "https://github.com/iorate/changesette"
-  version "2.0.1"
+  version "3.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v2.0.1/changesette-aarch64-apple-darwin.tar.xz"
-      sha256 "2f77f2208a09c6fb4bcd034422dadb9a0f6d53e086983b2b14746c671a1af392"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v3.0.0/changesette-aarch64-apple-darwin.tar.xz"
+      sha256 "b8ed4ab17b51caff26b90c6363f7210f49f066b44857ff1189b356e1c142be5c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v2.0.1/changesette-x86_64-apple-darwin.tar.xz"
-      sha256 "8e753ba60b2f4a06fa09f95a2c4bc4fbe614225585e45a53d98650f87334cd39"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v3.0.0/changesette-x86_64-apple-darwin.tar.xz"
+      sha256 "b96f32465c86d006c01ec363e7aceafab69e7e8bc50691ede48d0b02b98c2007"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v2.0.1/changesette-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "45eaf3951d8b0f972e9d9fad6e44a5dd08c6a5c7be98b13f5890540a2d2b437e"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v3.0.0/changesette-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2ab9ab16b6e568543e67b5b9e51be38f07bdc2efe4089d14999164c9ad88d7f7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v2.0.1/changesette-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8493a4fcc07e513219b44c36caa6888f5a73fbaa41f94acaceb9bdcd56c332d9"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v3.0.0/changesette-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d650522f449f5fb294fae406250204af9b7dacfb14dea4fb48f6f269ee0bd890"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Changesette < Formula
   end
 
   def install
-    bin.install "changesette" if OS.mac? && Hardware::CPU.arm?
-    bin.install "changesette" if OS.mac? && Hardware::CPU.intel?
-    bin.install "changesette" if OS.linux? && Hardware::CPU.arm?
-    bin.install "changesette" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "changesette"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "changesette"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "changesette"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "changesette"
+    end
 
     install_binary_aliases!
 
