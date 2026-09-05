@@ -1,25 +1,25 @@
 class Wepub < Formula
   desc "CLI to publish browser extensions to Chrome Web Store, Firefox Add-ons, and Edge Add-ons"
   homepage "https://github.com/iorate/wepub"
-  version "1.0.3"
+  version "1.0.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.3/wepub-aarch64-apple-darwin.tar.xz"
-      sha256 "7bfc510579bd79ece6dd26a6a4e799d9df6efb86206983608e2841aa8d2be201"
+      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.4/wepub-aarch64-apple-darwin.tar.xz"
+      sha256 "cfdf435280c0467ad40fd538393aa5c1d2ec50b9f5412e4abdb312f5998c0e8e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.3/wepub-x86_64-apple-darwin.tar.xz"
-      sha256 "68a4056dbf47d5e3e1625b5cc21f1ffd57728ee8e487251ba458d3a84ea08d4c"
+      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.4/wepub-x86_64-apple-darwin.tar.xz"
+      sha256 "aa2883f490c7b0e592b8fad92c2fd5f9eb2eb7dca0e8df6136dbc313ac628e16"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.3/wepub-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "c80c6d6461c36484047025de4d7dd46f1a5309d9f2e86e923c2627abe9909017"
+      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.4/wepub-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "1e8baf954ccd27b2a44eb8236f68ad9d1f613681fa4b1e93cd99d088089dbc92"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.3/wepub-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "2be74c78f381994d6e4261f89dec99ff42667d383593729197150c6f65485d13"
+      url "https://github.com/iorate/wepub/releases/download/wepub-v1.0.4/wepub-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "309507fc19370dc27e4e9d626a11d3545ccc71295955bb6e0048eb8c12765993"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -48,10 +48,18 @@ class Wepub < Formula
   end
 
   def install
-    bin.install "wepub" if OS.mac? && Hardware::CPU.arm?
-    bin.install "wepub" if OS.mac? && Hardware::CPU.intel?
-    bin.install "wepub" if OS.linux? && Hardware::CPU.arm?
-    bin.install "wepub" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "wepub"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "wepub"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "wepub"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "wepub"
+    end
 
     install_binary_aliases!
 
