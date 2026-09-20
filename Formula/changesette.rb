@@ -1,25 +1,25 @@
 class Changesette < Formula
   desc "A version and changelog manager using the changesets file format"
   homepage "https://github.com/iorate/changesette"
-  version "7.0.1"
+  version "7.1.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v7.0.1/changesette-aarch64-apple-darwin.tar.xz"
-      sha256 "b96ab8e148939adf285d8cd8c859db08ea5d1bbd58b1fd4676c6a41a4df6f23a"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v7.1.0/changesette-aarch64-apple-darwin.tar.xz"
+      sha256 "65ff879b28195e8f8e30bacfcc0ae3f4035f7798ef01d3c20439ca0692058352"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v7.0.1/changesette-x86_64-apple-darwin.tar.xz"
-      sha256 "729822ad3e4d11f7d712d84daa30c6a9468e3a46328205fdc49a3d0fd66b9d60"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v7.1.0/changesette-x86_64-apple-darwin.tar.xz"
+      sha256 "b2ac8e7b30b94279d5ce431cc6c4ad68d15a68809629bdc715e7bdd403996bd3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v7.0.1/changesette-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "9b097b7dc360698f8da8bf8981af388184ed1ad4bd421682c79fd32422f5f532"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v7.1.0/changesette-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "3a74ca9ae207902077e25f4caf6218f346377a23d3e497aa86bfb1a3a7d1e587"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iorate/changesette/releases/download/changesette-v7.0.1/changesette-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f5d50965c0763dd07e52402583d2ff98f8356de29dba074055bf60bc08df5d8f"
+      url "https://github.com/iorate/changesette/releases/download/changesette-v7.1.0/changesette-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1866e1b42aa6dbedd9a3bedacd0ab38f606c2c09a15e0da04b7bfab31af5c465"
     end
   end
   license "MIT"
