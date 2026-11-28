@@ -13,13 +13,13 @@
 class Wafu < Formula
   desc "Keyboard-driven dual-pane file manager"
   homepage "https://github.com/iorate/wafu"
-  version "0.4.0"
+  version "0.5.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/iorate/wafu/releases/download/v0.4.0/wafu-v0.4.0-macos-arm64.tar.gz"
-      sha256 "e51aede77db6693ddb972aa7c60ede9feca885af056500e2212f9aad90dfa38c"
+      url "https://github.com/iorate/wafu/releases/download/v0.5.0/wafu-v0.5.0-macos-arm64.tar.gz"
+      sha256 "7dbaf2df2c5a0028efd5e4fd9152d84a318b3f940b01052ee0b3b2cfba19ca0d"
     end
   end
 
@@ -27,8 +27,8 @@ class Wafu < Formula
   # and libraries and would not use Homebrew's.
   on_linux do
     on_intel do
-      url "https://github.com/iorate/wafu/releases/download/v0.4.0/wafu-v0.4.0-linux-x64.tar.gz"
-      sha256 "766769657023b0f4bf7fb7610444cc1372684ecb707da47eabbc9449a0efbbcf"
+      url "https://github.com/iorate/wafu/releases/download/v0.5.0/wafu-v0.5.0-linux-x64.tar.gz"
+      sha256 "aa1ac1012cfbef80a820632e8b7e01383385fa8d24066298887767c73494c753"
     end
   end
 
